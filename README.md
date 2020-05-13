@@ -1,6 +1,3 @@
-[![Build Status](https://travis-ci.org/JimTouz/counter-strike-docker.svg?branch=master)](https://travis-ci.org/JimTouz/counter-strike-docker)
-[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://github.com/JimTouz/counter-strike-docker/blob/master/LICENSE)
-
 # Docker image for Counter Strike 1.6 Dedicated Server
 
 ## Start the server
@@ -23,8 +20,8 @@ docker run -d -p 26900:26900/udp -p 27020:27020/udp -p 27015:27015/udp -p 27015:
 | `MAXPLAYERS` | The maximum number of players | `32` |
 | `START_MAP` | The initial map | `de_dust2` |
 | `SERVER_NAME` | The server name | `Counter-Strike 1.6 Server` |
-| `START_MONEY` | The initial money | `800` |
-| `BUY_TIME` | The allowed time to buy items in each round (*minutes*) | `0.25` |
+| `START_MONEY` | The initial money | `1000` |
+| `BUY_TIME` | The allowed time to buy items in each round (*minutes*) | `0.35` |
 | `FRIENDLY_FIRE` | Enable or disable the friendly fire. (*off: 0, on: 1*) | `1` |
 | `SERVER_PASSWORD` | The server password. (*Empty for no server password*) | None |
 | `RCON_PASSWORD` | The rcon password. (*Empty for no rcon password*) | None |
@@ -48,13 +45,3 @@ docker start cs
 ```bash
 docker rm cs
 ```
-
-# Attributions
-
-This project is based on [counter-strike-docker](https://github.com/artem-panchenko/counter-strike-docker), developed by [Artem Panchenko](https://github.com/artem-panchenko).
-
-## Changes from original project
-
-* Changed the name of the build.
-* Added new maps.
-* Added new parameters in run script.
