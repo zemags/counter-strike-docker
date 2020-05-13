@@ -25,11 +25,11 @@ ADD hlds_run.sh /bin/hlds_run.sh
 RUN chmod +x /bin/hlds_run.sh
 
 # Add default config
-ADD files/server.cfg /opt/hlds/cstrike/server.cfg
+COPY ./files/server.cfg /opt/hlds/cstrike/server.cfg
 
 # Add maps
-ADD maps/* /opt/hlds/cstrike/maps/
-ADD files/mapcycle.txt /opt/hlds/cstrike/mapcycle.txt
+COPY ./maps /opt/hlds/cstrike/maps
+COPY ./files/mapcycle.txt /opt/hlds/cstrike/mapcycle.txt
 
 # Install metamod
 RUN mkdir -p /opt/hlds/cstrike/addons/metamod/dlls

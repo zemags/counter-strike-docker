@@ -45,3 +45,8 @@ docker start cs
 ```bash
 docker rm cs
 ```
+
+## Dive into runnnig container
+```bash
+sudo docker exec -t -i cs /bin/bash
+```
