@@ -49,4 +49,11 @@ docker rm cs
 ## Dive into runnnig container
 ```bash
 sudo docker exec -t -i cs /bin/bash
+sudo docker exec -it cs bash
+```
+
+## update_mash script to dowdload zip map
+### example:
+```bash
+bash update_mash.sh https://dl.all-cs.ru/cs16/maps/cs/cs_rats2.zip
 ```
